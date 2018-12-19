@@ -1,0 +1,7 @@
+rootProject.name = 'demo'
+include 'eureka-server'
+include 'hi-service-eureka-client'
+include 'spring-boot-admin'
+include 'load-balancer-with-feign'
+include 'circuitbreaker-with-hystrix'
+
