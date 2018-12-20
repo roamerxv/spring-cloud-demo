@@ -3,7 +3,7 @@ server:
 
 spring:
     application:
-        name: feign-client
+        name: load-balancer-feign-client
     security:
         user:
             name: admin

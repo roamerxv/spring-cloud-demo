@@ -2,11 +2,9 @@ buildscript {
     ext {
         REPOSITORY_HOME = "http://maven.aliyun.com/nexus/content/groups/public/"
         SpringBootVersion = "2.1.1.RELEASE"
-        SpringCloudDependenciesVersion = 'Greenwich.RC1'
-        // SpringCloudVersion = '2.0.2.RELEASE'
+        SpringCloudVersion = 'Greenwich.RC1'
         SpringBootAdminVersion = '2.1.1'
         SrpingSessionDataRedis = "2.1.2.RELEASE"
-        Resilience4jVersion = '0.13.2'
     }
     repositories {
         maven { url "${REPOSITORY_HOME}" }
@@ -50,7 +48,7 @@ allprojects {
 
     dependencyManagement {
         imports {
-            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${SpringCloudDependenciesVersion}"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${SpringCloudVersion}"
         }
     }
 

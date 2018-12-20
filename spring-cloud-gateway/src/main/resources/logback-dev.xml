@@ -2,7 +2,7 @@
 <configuration debug="true"  scan="true" scanPeriod="60 seconds">
     <contextName>load-balancer-with-feign</contextName>
 
-    <property name="app_name" value="spring-cloud-loadbalancer"/>
+    <property name="app_name" value="srping-cloud-gateway"/>
     <property name="log.path" value="/logs/${app_name}/logback.log"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">

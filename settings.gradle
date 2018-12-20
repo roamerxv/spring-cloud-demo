@@ -4,4 +4,6 @@ include 'hi-service-eureka-client'
 include 'spring-boot-admin'
 include 'load-balancer-with-feign'
 include 'circuitbreaker-with-hystrix'
+include 'spring-cloud-gateway'
+findProject(':spring-cloud-gateway')?.name = 'gateway'
 

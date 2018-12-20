@@ -3,7 +3,7 @@ server:
 
 spring:
     application:
-        name: feign-client-with-resilience4j-circuitbreaker
+        name: feign-client-with-hystrix-circuitbreaker
     security:
         user:
             name: admin

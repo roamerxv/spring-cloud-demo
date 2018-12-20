@@ -1,0 +1,60 @@
+server:
+    port: 8766
+
+spring:
+    application:
+        name: spring-cloud-gateway
+    security:
+        user:
+            name: admin
+            password: admin
+    boot:
+        admin:
+            client:
+                url: http://127.0.0.1:8000                      ## 指向 spring boot admin server
+                username: admin
+                password: admin
+    #                instance:
+    #                    service-base-url:  http://127.0.0.1:8080    ## 通过 war 方式部署的时候，需要指定被注册的app 的访问 url
+
+
+    cloud:
+        ############ spring cloud gateway 配置        开始
+        gateway:
+            discovery:
+                locator:
+                    enabled: true           # 使用 eureka client 进行定位
+                    lower-case-service-id: true
+#            routes:
+#            -   id: host_route
+#                uri: hi-service:8762/hi
+#                predicates:
+#                -   Path=/a/**
+#
+#            -   id: host_route
+#                uri: hi-service:8762/hi
+#                predicates:
+#                -   Path=/b
+                #    id：固定，不同 id 对应不同的功能，可参考 官方文档
+                #    uri：目标服务地址
+                #    predicates：路由条件
+                #    filters：过滤规则
+        ############ spring cloud gateway 配置        结束
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://127.0.0.1:8761/eureka/
+        fetchRegistry: true
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+
+
+
+logging:
+    config: classpath:logback-${spring.profiles.active}.xml
+    level:
+        org.springframework.cloud.gateway: trace
