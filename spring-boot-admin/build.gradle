@@ -19,5 +19,7 @@ dependencies {
             "de.codecentric:spring-boot-admin-starter-server:${SpringBootAdminVersion}",
             "de.codecentric:spring-boot-admin-server-ui:${SpringBootAdminVersion}",
             "de.codecentric:spring-boot-admin-server-ui-login:1.5.7",
+            //spring cloud config client
+            "org.springframework.cloud:spring-cloud-starter-config",
     )
 }

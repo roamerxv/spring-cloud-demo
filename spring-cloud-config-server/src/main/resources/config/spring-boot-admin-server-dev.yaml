@@ -1,0 +1,14 @@
+server:
+    port: 8000
+
+spring:
+    application:
+        name: spring-boot-admin-server
+    security:
+        user:
+            name: admin
+            password: admin
+
+management:
+    security:
+        enabled: true
