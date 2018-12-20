@@ -2,7 +2,7 @@
 <configuration debug="true"  scan="true" scanPeriod="60 seconds">
     <contextName>feign-client-with-hystrix-circuitbreaker</contextName>
 
-    <property name="app_name" value="resilience4j-circuitbreaker"/>
+    <property name="app_name" value="feign-client-with-hystrix-circuitbreaker"/>
     <property name="log.path" value="/logs/${app_name}/logback.log"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
