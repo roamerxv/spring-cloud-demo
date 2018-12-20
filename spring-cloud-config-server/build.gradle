@@ -1,0 +1,15 @@
+plugins {
+//    id 'war'
+}
+
+apply plugin: 'application'
+mainClassName = 'pers.roamer.spring.cloud.config.server.ConfigServerApplication'
+
+dependencies {
+    compile(
+            "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
+            "org.springframework.cloud:spring-cloud-config-server",
+            "de.codecentric:spring-boot-admin-starter-client:${SpringBootAdminVersion}",
+    )
+
+}

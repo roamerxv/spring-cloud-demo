@@ -6,4 +6,6 @@ include 'load-balancer-with-feign'
 include 'circuitbreaker-with-hystrix'
 include 'spring-cloud-gateway'
 findProject(':spring-cloud-gateway')?.name = 'gateway'
+include 'spring-cloud-config-server'
+findProject(':spring-cloud-config-server')?.name = 'config-server'
 
