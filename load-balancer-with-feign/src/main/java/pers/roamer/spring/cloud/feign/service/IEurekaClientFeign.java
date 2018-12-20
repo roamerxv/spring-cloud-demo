@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author: roamer-徐泽宇
  * @create: 2018-12-17 17:20
  **/
-@FeignClient(value = "hi-service")
+@FeignClient(value = "hi-service-eureka-client")
 public interface IEurekaClientFeign {
     /**
      * 调用 eureka client 上的 restful 方法

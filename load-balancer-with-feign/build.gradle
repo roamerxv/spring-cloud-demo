@@ -12,8 +12,7 @@ dependencies {
             "org.springframework.cloud:spring-cloud-starter-openfeign",
             "de.codecentric:spring-boot-admin-starter-client:${SpringBootAdminVersion}",
             "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
-//            "org.springframework.boot:spring-boot-starter-data-redis:$SpringBootVersion",
-//            "org.springframework.session:spring-session-data-redis:${SrpingSessionDataRedis}",
-
+            //spring cloud config client
+            "org.springframework.cloud:spring-cloud-starter-config",
     )
 }
