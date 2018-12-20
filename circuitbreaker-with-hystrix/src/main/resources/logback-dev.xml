@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <configuration debug="true"  scan="true" scanPeriod="60 seconds">
-    <contextName>resilience4j-circuitbreaker-with-feign</contextName>
+    <contextName>feign-client-with-hystrix-circuitbreaker</contextName>
 
     <property name="app_name" value="resilience4j-circuitbreaker"/>
     <property name="log.path" value="/logs/${app_name}/logback.log"/>

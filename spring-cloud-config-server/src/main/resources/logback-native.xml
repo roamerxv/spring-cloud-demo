@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <configuration debug="true"  scan="true" scanPeriod="60 seconds">
-    <contextName>config-server</contextName>
+    <contextName>spring-cloud-config-server</contextName>
 
     <property name="app_name" value="spring-cloud-gateway"/>
     <property name="log.path" value="/logs/${app_name}/logback.log"/>
