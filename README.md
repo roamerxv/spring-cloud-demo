@@ -1,4 +1,4 @@
-# srping boot admin + eureka + feign + hystrix  
+# srping boot admin + eureka + openfeign + hystrix + spring-cloud-gateway + spring-cloud-config  
 
 使用 spring boot 2.1.1 环境
 
