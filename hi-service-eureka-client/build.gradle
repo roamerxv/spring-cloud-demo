@@ -9,10 +9,12 @@ dependencies {
     compile(
             "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
             "org.springframework.boot:spring-boot-starter-web",
-            "org.springframework.boot:spring-boot-starter-data-redis:$SpringBootVersion",
+            "org.springframework.boot:spring-boot-starter-data-redis",
             "org.springframework.session:spring-session-data-redis:${SrpingSessionDataRedis}",
             "org.springframework.boot:spring-boot-starter-actuator",
             "de.codecentric:spring-boot-admin-starter-client:${SpringBootAdminVersion}",
+            //spring cloud config client
+            "org.springframework.cloud:spring-cloud-starter-config",
     )
 
 }
