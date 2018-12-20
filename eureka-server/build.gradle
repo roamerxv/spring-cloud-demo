@@ -8,6 +8,8 @@ mainClassName = 'pers.roamer.spring.cloud.eureka.server.ServerApplication'
 dependencies {
     compile(
             "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server",
-            "de.codecentric:spring-boot-admin-starter-client:${SpringBootAdminVersion}"
+            "de.codecentric:spring-boot-admin-starter-client:${SpringBootAdminVersion}",
+            //spring cloud config client
+            "org.springframework.cloud:spring-cloud-starter-config",
     )
 }
