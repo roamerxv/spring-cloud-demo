@@ -11,6 +11,8 @@ dependencies {
         "org.springframework.cloud:spring-cloud-starter-gateway",
         "org.springframework.boot:spring-boot-starter-actuator",
         "de.codecentric:spring-boot-admin-starter-client:${SpringBootAdminVersion}",
+        //spring cloud config client
+        "org.springframework.cloud:spring-cloud-starter-config",
     )
 
 }

@@ -2,8 +2,6 @@ server:
     port: 8766
 
 spring:
-    application:
-        name: spring-cloud-gateway
     security:
         user:
             name: admin
@@ -25,16 +23,16 @@ spring:
                 locator:
                     enabled: true           # 使用 eureka client 进行定位
                     lower-case-service-id: true
-#            routes:
-#            -   id: host_route
-#                uri: hi-service:8762/hi
-#                predicates:
-#                -   Path=/a/**
-#
-#            -   id: host_route
-#                uri: hi-service:8762/hi
-#                predicates:
-#                -   Path=/b
+                #            routes:
+                #            -   id: host_route
+                #                uri: hi-service:8762/hi
+                #                predicates:
+                #                -   Path=/a/**
+                #
+                #            -   id: host_route
+                #                uri: hi-service:8762/hi
+                #                predicates:
+                #                -   Path=/b
                 #    id：固定，不同 id 对应不同的功能，可参考 官方文档
                 #    uri：目标服务地址
                 #    predicates：路由条件
