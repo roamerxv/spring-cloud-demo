@@ -11,5 +11,7 @@ dependencies {
             "org.springframework.cloud:spring-cloud-starter-openfeign",
             "de.codecentric:spring-boot-admin-starter-client:${SpringBootAdminVersion}",
             "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
+            //spring cloud config client
+            "org.springframework.cloud:spring-cloud-starter-config",
     )
 }

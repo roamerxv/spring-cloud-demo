@@ -1,0 +1,9 @@
+spring:
+    application:
+        name: feign-client-with-hystrix-circuitbreaker
+    cloud:
+        config:
+            uri: http://127.0.0.1:8769
+            fail-fast: true
+    profiles:
+        active: dev

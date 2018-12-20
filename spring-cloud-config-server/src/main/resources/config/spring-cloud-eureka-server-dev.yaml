@@ -17,8 +17,6 @@ logging:
 
 
 spring:
-    application:
-        name: spring-cloud-eureka-server
     boot:
         admin:
             client:
