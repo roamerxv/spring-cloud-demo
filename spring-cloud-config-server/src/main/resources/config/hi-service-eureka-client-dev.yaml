@@ -2,6 +2,13 @@ server:
     port: 8763
 
 spring:
+    rabbitmq:
+        host: 119.3.25.179
+        prot: 5672
+        username: admin
+        password: admin
+    bus:
+        enabled: true
     redis:
         host: 119.3.24.23
         password: 1qaz369*
@@ -41,4 +48,4 @@ eureka:
 
 
 foo:
-    foo-version: 1.0.1 test by
+    foo-version: 1.111

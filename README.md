@@ -12,4 +12,5 @@ spring cloud 微服务的学习项目
 6. spring cloud gateway 做的路由机制，支持通过 spring cloud eureka client  service id 进行寻址路由的方式
     http://127.0.0.1:8766/feign-client-with-hystrix-circuitbreaker/sayHi    调用具有熔断和负载均衡的服务
     http://127.0.0.1:8766/hi-service/hi                                     直接调用一个 eureka client 的服务（多个实例，侦听不同端口），并且自动进行负载均衡，但是不具备熔断。
-7. spring cloud config server                                               所有的模块的配置都通过 spring cloud config server 读取 
+7. spring cloud config server                                               所有的模块的参数都通过 spring cloud config server 读取
+8. spring cloud bus for rabbitmq                                            所有的模块的动态参数都通过 spring cloud bus rabbitmq 来完成参数动态热更新的功能
