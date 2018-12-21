@@ -39,3 +39,6 @@ eureka:
         serviceUrl:
             defaultZone: http://127.0.0.1:8761/eureka/
 
+
+foo:
+    foo-version: 1.0.1 test by

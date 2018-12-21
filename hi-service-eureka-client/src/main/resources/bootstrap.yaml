@@ -2,8 +2,15 @@ spring:
     application:
         name: hi-service-eureka-client
     cloud:
+        bus:
+            enabled: true
         config:
             uri: http://127.0.0.1:8769
             fail-fast: true
+    rabbitmq:
+        host: 119.3.25.179
+        prot: 5672
+        username: admin
+        password: admin
     profiles:
         active: dev
