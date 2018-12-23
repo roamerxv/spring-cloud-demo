@@ -2,6 +2,8 @@ server:
     port: 8762
 
 spring:
+    profiles:
+        active: dev
     cloud:
         bus:
             enabled: true
@@ -39,6 +41,7 @@ spring:
                 instance:
                     service-base-url:  http://127.0.0.1:${server.port}    ## 通过 war 方式部署的时候，需要指定被注册的app 的访问 url
 
+
 management:
     endpoints:
         web:
@@ -47,5 +50,10 @@ management:
     endpoint:
         env:
             enabled: true
+
+logging:
+    config: classpath:logback-${spring.profiles.active}.xml
+
+
 foo:
     foo-version: 103
