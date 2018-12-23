@@ -14,9 +14,21 @@ spring:
                 url: http://127.0.0.1:8000                      ## 指向 spring boot admin server
                 username: admin
                 password: admin
-    #                instance:
-    #                    service-base-url:  http://127.0.0.1:8080    ## 通过 war 方式部署的时候，需要指定被注册的app 的访问 url
+                instance:
+                    service-base-url:  http://127.0.0.1:${server.port}    ## 通过 war 方式部署的时候，需要指定被注册的app 的访问 url
+    rabbitmq:
+        host: 119.3.25.179
+        port: 5672
+        username: admin
+        password: admin
     cloud:
+        bus:
+            enabled: true
+            ## 开启消息跟踪
+            trace:
+                enabled: true
+            refresh:
+                enabled: true
         config:
             server:
                 native:
@@ -34,11 +46,17 @@ eureka:
 
 management:
     endpoints:
+
         web:
             exposure:
-                include: '*'
-
+                include: "*"
+    endpoint:
+        env:
+            enabled: true
 
 
 logging:
     config: classpath:logback-${spring.profiles.active}.xml
+
+foo:
+    foo-version: 5

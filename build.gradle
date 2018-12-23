@@ -2,7 +2,8 @@ buildscript {
     ext {
         REPOSITORY_HOME = "http://maven.aliyun.com/nexus/content/groups/public/"
         SpringBootVersion = "2.1.1.RELEASE"
-        SpringCloudVersion = 'Greenwich.RC1'
+        SpringCloudVersion = 'Greenwich.RC2'
+//        SpringCloudVersion = 'Finchley.RELEASE'
         SpringBootAdminVersion = '2.1.1'
         SrpingSessionDataRedis = "2.1.2.RELEASE"
     }
@@ -11,7 +12,12 @@ buildscript {
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${SpringBootVersion}")
+        classpath(
+            //处理 spring boot 的集成
+            "org.springframework.boot:spring-boot-gradle-plugin:${SpringBootVersion}",
+            //处理 spring cloud 的集成
+            "io.spring.gradle:dependency-management-plugin:1.0.2.RELEASE"
+        )
     }
 }
 

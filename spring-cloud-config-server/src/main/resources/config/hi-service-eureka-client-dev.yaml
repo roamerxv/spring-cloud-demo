@@ -1,14 +1,18 @@
 server:
-    port: 8763
+    port: 8762
 
 spring:
+    cloud:
+        bus:
+            enabled: true
+            ## 开启消息跟踪
+            trace:
+                enabled: true
     rabbitmq:
         host: 119.3.25.179
-        prot: 5672
+        port: 5672
         username: admin
         password: admin
-    bus:
-        enabled: true
     redis:
         host: 119.3.24.23
         password: 1qaz369*
@@ -32,20 +36,16 @@ spring:
                 url: http://127.0.0.1:8000                      ## 指向 spring boot admin server
                 username: admin
                 password: admin
-#                instance:
-#                    service-base-url:  http://127.0.0.1:8080    ## 通过 war 方式部署的时候，需要指定被注册的app 的访问 url
+                instance:
+                    service-base-url:  http://127.0.0.1:${server.port}    ## 通过 war 方式部署的时候，需要指定被注册的app 的访问 url
 
 management:
     endpoints:
         web:
             exposure:
                 include: "*"
-
-eureka:
-    client:
-        serviceUrl:
-            defaultZone: http://127.0.0.1:8761/eureka/
-
-
+    endpoint:
+        env:
+            enabled: true
 foo:
-    foo-version: 1.111
+    foo-version: 103
