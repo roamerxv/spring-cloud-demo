@@ -3,9 +3,9 @@ buildscript {
         REPOSITORY_HOME = "http://maven.aliyun.com/nexus/content/groups/public/"
         SpringBootVersion = "2.1.1.RELEASE"
         SpringCloudVersion = 'Greenwich.RC2'
-//        SpringCloudVersion = 'Finchley.RELEASE'
         SpringBootAdminVersion = '2.1.1'
         SrpingSessionDataRedis = "2.1.2.RELEASE"
+        LombokVersion = "1.18.4"
     }
     repositories {
         maven { url "${REPOSITORY_HOME}" }
@@ -29,7 +29,6 @@ plugins {
     /* 这里定义一个检查 dependency 版本的插件 插件！ 调用方法 gradle dependencyUpdates -Drevision=release */
     id 'com.github.ben-manes.versions' version "0.20.0"
     /* 定义结束  */
-
 }
 
 allprojects {
@@ -59,7 +58,7 @@ allprojects {
     }
 
     dependencies {
-        compileOnly "org.projectlombok:lombok:1.18.4"
+        compileOnly "org.projectlombok:lombok:${LombokVersion}"
         compile("org.springframework.boot:spring-boot-starter-logging:${SpringBootVersion}")
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
